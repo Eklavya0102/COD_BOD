@@ -86,7 +86,7 @@ def download_pdf():
 
     pdf_path = os.path.join(OUTPUT_DIR, "report.pdf")
 
-    # ── Build PDF ──────────────────────────────────────────────────────────
+    # builder pdf
     doc = SimpleDocTemplate(
         pdf_path,
         pagesize=A4,
@@ -142,7 +142,7 @@ def download_pdf():
 
     story = []
 
-    # ── Header bar (via colored table) ────────────────────────────────────
+    # head bar 
     header_data = [[f"WATER QUALITY ANALYSIS REPORT – {year}"]]
     header_table = Table(header_data, colWidths=[17*cm])
     header_table.setStyle(TableStyle([
